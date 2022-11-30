@@ -8,10 +8,11 @@
     tools:context=".setting.SettingActivity">
 
     <TextView
+        android:id="@+id/tv_theme"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/theme"
-        android:textSize="@dimen/sp_23"
+        android:textSize="@dimen/sp_19"
         android:textColor="?attr/colorMain"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -26,13 +27,24 @@
         android:layout_height="47dp"
         android:layout_marginEnd="12dp"
         android:contentDescription="@string/ic_darkmode"
-        android:src="@drawable/ic_baseline_dark_mode_24" />
+        android:src="@drawable/ic_baseline_dark_mode_24"
+        app:layout_constraintBottom_toBottomOf="@id/sw_theme"
+        app:layout_constraintTop_toTopOf="@id/sw_theme"
+        app:layout_constraintEnd_toStartOf="@id/sw_theme"
+        app:layout_constraintVertical_bias="0.045" />
 
     <com.google.android.material.switchmaterial.SwitchMaterial
+        android:id="@+id/sw_theme"
         android:layout_width="287dp"
         android:layout_height="49dp"
         android:layout_marginTop="21dp"
         android:minHeight="49dp"
         android:text="@string/darkmode"
+        android:textSize="@dimen/sp_17"
+        app:layout_constraintStart_toStartOf="@id/tv_theme"
+        app:layout_constraintEnd_toEndOf="@id/tv_theme"
+        app:layout_constraintHorizontal_bias="0.867"
+        app:layout_constraintTop_toBottomOf="@id/tv_theme" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

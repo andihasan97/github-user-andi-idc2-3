@@ -6,6 +6,7 @@
     <string name="search">Search</string>
     <string name="detail">DETAIL USER</string>
     <string name="profile">Profile</string>
+    <string name="img_profile">Image Profile</string>
     <string name="repository">Repository</string>
     <string name="followers">Followers</string>
     <string name="following">Following</string>
