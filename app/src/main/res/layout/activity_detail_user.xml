@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/sizeAllMatchParent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent"
+    tools:context=".ui.detailuser.DetailUser">
+
+    <LinearLayout
+        style="@style/sizeParsialMatchParent"
+        android:orientation="vertical">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/relativeLayout"
+            android:layout_width="match_parent"
+            android:layout_height="320dp"
+            android:padding="@dimen/dp_16"
+            tools:context=".ui.detailuser.DetailUser">
+
+            <ProgressBar
+                android:id="@+id/detail_progress_bar"
+                android:layout_width="@dimen/dp_60"
+                android:layout_height="@dimen/dp_60"
+                android:visibility="invisible"
+                app:layout_constraintEnd_toEndOf="@+id/detail_avatar"
+                app:layout_constraintHorizontal_bias="0.515"
+                app:layout_constraintStart_toStartOf="@+id/detail_avatar"
+                app:layout_constraintTop_toTopOf="@+id/detail_name" />
+
+            <TextView
+                android:id="@+id/detail_name"
+                style="@style/sizeAllWrapContent"
+                android:layout_below="@+id/detail_avatar"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="@dimen/dp_16"
+                android:gravity="center"
+                android:text="@string/name"
+                android:textColor="?attr/colorMain"
+                android:textSize="@dimen/sp_24"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.498"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/detail_avatar" />
+
+            <TextView
+                android:id="@+id/detail_username"
+                style="@style/sizeAllWrapContent"
+                android:layout_below="@id/detail_name"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="@dimen/dp_8"
+                android:ellipsize="end"
+                android:gravity="center"
+                android:maxLines="3"
+                android:text="@string/username"
+                android:textSize="@dimen/sp_18"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/detail_name" />
+
+            <TextView
+                android:id="@+id/detail_repository"
+                style="@style/sizeAllWrapContent"
+                android:layout_marginEnd="@dimen/dp_8"
+                android:layout_alignBaseline="@id/detail_followers"
+                android:layout_toStartOf="@id/detail_followers"
+                android:ellipsize="end"
+                android:maxLines="3"
+                android:text="@string/repository"
+                app:layout_constraintBottom_toBottomOf="@+id/detail_following"
+                app:layout_constraintEnd_toStartOf="@+id/detail_following"
+                app:layout_constraintTop_toTopOf="@+id/detail_following" />
+
+            <TextView
+                android:id="@+id/detail_followers"
+                style="@style/sizeAllWrapContent"
+                android:layout_below="@+id/detail_location"
+                android:layout_centerHorizontal="true"
+                android:layout_marginStart="@dimen/dp_8"
+                android:ellipsize="end"
+                android:maxLines="3"
+                android:text="@string/followers"
+                app:layout_constraintBottom_toBottomOf="@id/detail_following"
+                app:layout_constraintStart_toEndOf="@id/detail_following"
+                app:layout_constraintTop_toTopOf="@id/detail_following" />
+
+            <TextView
+                android:id="@+id/detail_following"
+                style="@style/sizeAllWrapContent"
+                android:layout_alignBaseline="@id/detail_followers"
+                android:layout_marginStart="@dimen/dp_8"
+                android:layout_marginTop="@dimen/dp_8"
+                android:layout_marginEnd="@dimen/dp_8"
+                android:layout_marginBottom="@dimen/dp_16"
+                android:layout_toEndOf="@id/detail_followers"
+                android:ellipsize="end"
+                android:maxLines="3"
+                android:text="@string/following"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@+id/detail_company"
+                app:layout_constraintHorizontal_bias="0.529"
+                app:layout_constraintStart_toStartOf="@+id/detail_company"
+                app:layout_constraintTop_toBottomOf="@+id/detail_company"
+                app:layout_constraintVertical_bias="0.0" />
+
+            <TextView
+                android:id="@+id/detail_company"
+                style="@style/sizeAllWrapContent"
+                android:layout_below="@id/detail_username"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="@dimen/dp_8"
+                android:ellipsize="end"
+                android:gravity="center"
+                android:maxLines="3"
+                android:text="@string/company"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/detail_location" />
+
+            <TextView
+                android:id="@+id/detail_location"
+                style="@style/sizeAllWrapContent"
+                android:layout_below="@id/detail_company"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="@dimen/dp_8"
+                android:ellipsize="end"
+                android:maxLines="3"
+                android:text="@string/location"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/detail_username" />
+
+            <com.github.siyamed.shapeimageview.RoundedImageView
+                android:id="@+id/detail_avatar"
+                android:layout_width="@dimen/dp_100"
+                android:layout_height="@dimen/dp_100"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentEnd="true"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.498"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.141"
+                app:siBorderWidth="@dimen/dp_5"
+                app:siBorderColor="?attr/colorMain"
+                app:siRadius="@dimen/dp_150"
+                tools:ignore="ImageContrastCheck"
+                tools:src="@tools:sample/avatars" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <com.google.android.material.tabs.TabLayout
+            android:id="@+id/tabs"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_67"
+            android:minHeight="?actionBarSize"
+            android:outlineSpotShadowColor="@color/greenDark"
+            app:tabIndicatorFullWidth="false"
+            app:tabIndicatorHeight="@dimen/dp_2"
+            tools:ignore="MissingConstraints,ObsoleteSdkInt,SpeakableTextPresentCheck"
+            tools:targetApi="p" />
+
+        <androidx.viewpager2.widget.ViewPager2
+            android:id="@+id/view_pager"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_543" />
+    </LinearLayout>
+
+</ScrollView>
